@@ -10,16 +10,16 @@ class project17
         System.out.println("Enter a month:");
         String m= sc.nextLine();
         String m2= m.toLowerCase();
-        char[] months= {'j','f','m','a','m','j','j','a','s','o','n','d'};
-        String[] meteor= {"","Quadrantids in first week of","No meteor shower in","No meteor shower in","Lyrids in late","Eta Aquarids in first week of","No meteor shower in","Delta Aquarids in late","Perseids in mid","No meteor shower in","Draconids and Orionids in","Taurids and Leonids in","Geminids and Ursids"};
-        char c= m2.charAt(0);
+        String[] months= {"jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec"};
+        String[] meteor= {"Quadrantids in first week of","No meteor shower in","No meteor shower in","Lyrids in late","Eta Aquarids in first week of","No meteor shower in","Delta Aquarids in late","Perseids in mid","No meteor shower in","Draconids and Orionids in","Taurids and Leonids in","Geminids and Ursids"};
+        String f= m2.substring(0, 3);
         int k= 0;
         //checking which month was entered and matching it in the standard array
-        for(int i=0; i<12; i++)
+        for(int i=0; i<=11; i++)
         {
-            if(months[i]==c)
+            if(f.equals(months[i]))
             {
-                k= i+1;
+                k= i;
                 break;
             }
         }
